@@ -4,38 +4,28 @@ namespace Clap
 {
     public class NamedArgumentAttribute : ArgumentBase
     {
-        public NamedArgumentAttribute(
-            string LongName,
-            char? ShortName = null,
-            string HelpDescription = null,
-            bool Required = false,
-            string MutuallyExclusiveSet = null,
-            object DefaultValue = null) 
-                : base(HelpDescription, Required, MutuallyExclusiveSet, DefaultValue)
+        public NamedArgumentAttribute(string longName)
         {
-            if(LongName == null)
+            if(longName == null)
                 throw new ArgumentNullException("LongName");
-            if(String.IsNullOrWhiteSpace(LongName))
+            if(String.IsNullOrWhiteSpace(longName))
                 throw new ArgumentException("Argument \"LongName\" cannot be an empty string.");
 
-            this.ShortName = ShortName;
-            this.LongName = LongName;
+            LongName = longName;
         }
 
-        public NamedArgumentAttribute(
-            char ShortName, 
-            string LongName = null,
-            string HelpDescription = null,
-            bool Required = false,
-            string MutuallyExclusiveSet = null,
-            object DefaultValue = null)
-                : base(HelpDescription, Required, MutuallyExclusiveSet, DefaultValue)
+        public NamedArgumentAttribute(char shortName)
         {
-            this.ShortName = ShortName;
-            this.LongName = LongName;
+            ShortName = shortName;
         }
 
-        public char? ShortName { get; private set; }
+        public NamedArgumentAttribute(char shortName, string longName)
+        {
+            ShortName = shortName;
+            LongName = longName;
+        }
+
+        public char ShortName { get; private set; }
         public string LongName { get; private set; }
     }
 }

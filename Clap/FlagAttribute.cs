@@ -2,28 +2,24 @@
 {
     public class FlagAttribute : NamedArgumentAttribute
     {
-        public FlagAttribute(
-            char ShortName,
-            string LongName = null,
-            string HelpDescription = null,
-            bool Required = false,
-            string MutuallyExclusiveSet = null,
-            object DefaultValue = null)
-                :base(ShortName, LongName, HelpDescription, Required, MutuallyExclusiveSet, DefaultValue)
+        public FlagAttribute(char ShortName)
+                :base(ShortName)
         {
             
         }
 
-        public FlagAttribute(
-            string LongName,
-            char? ShortName = null,
-            string HelpDescription = null,
-            bool Required = false,
-            string MutuallyExclusiveSet = null,
-            object DefaultValue = null)
-                : base(LongName, ShortName, HelpDescription, Required, MutuallyExclusiveSet, DefaultValue)
+        public FlagAttribute(string LongName)
+                : base(LongName)
         {
 
+        }
+
+        public FlagAttribute(
+            char ShortName,
+            string LongName)
+            : base(ShortName, LongName)
+        {
+            
         }
     }
 }
