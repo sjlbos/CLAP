@@ -3,7 +3,7 @@
     public class PositionalArgumentListAttribute : PositionalArgumentAttribute
     {
         public PositionalArgumentListAttribute(
-            int? Index = null,
+            uint? Index = null,
             string Delimeter = null,
             uint MinLength = 0,
             uint MaxLength = 0,
