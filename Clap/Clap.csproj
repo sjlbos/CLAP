@@ -44,6 +44,7 @@
     <Compile Include="ArgumentStyle.cs" />
     <Compile Include="ArgumentStyleAttribute.cs" />
     <Compile Include="ClapException.cs" />
+    <Compile Include="CommandAttribute.cs" />
     <Compile Include="Core\ArgumentParser.cs" />
     <Compile Include="Core\DosParser.cs" />
     <Compile Include="Core\Exceptions\ParsingException.cs" />
@@ -52,9 +53,9 @@
     <Compile Include="Core\Token.cs" />
     <Compile Include="Core\TokenType.cs" />
     <Compile Include="Core\UnixParser.cs" />
-    <Compile Include="OptionListAttribute.cs" />
+    <Compile Include="NamedArgumentListAttribute.cs" />
     <Compile Include="FlagAttribute.cs" />
-    <Compile Include="OptionAttribute.cs" />
+    <Compile Include="NamedArgumentAttribute.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="ParseStatus.cs" />
     <Compile Include="PositionalArgumentAttribute.cs" />
