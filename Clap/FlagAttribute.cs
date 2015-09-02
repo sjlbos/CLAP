@@ -1,6 +1,6 @@
 ﻿namespace Clap
 {
-    public class FlagAttribute : OptionalArgumentAttribute
+    public class FlagAttribute : NamedArgumentAttribute
     {
         public FlagAttribute(
             char ShortName,

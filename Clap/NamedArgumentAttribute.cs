@@ -2,9 +2,9 @@
 
 namespace Clap
 {
-    public class OptionalArgumentAttribute : ArgumentBase
+    public class NamedArgumentAttribute : ArgumentBase
     {
-        public OptionalArgumentAttribute(
+        public NamedArgumentAttribute(
             string LongName,
             char? ShortName = null,
             string HelpDescription = null,
@@ -22,7 +22,7 @@ namespace Clap
             this.LongName = LongName;
         }
 
-        public OptionalArgumentAttribute(
+        public NamedArgumentAttribute(
             char ShortName, 
             string LongName = null,
             string HelpDescription = null,

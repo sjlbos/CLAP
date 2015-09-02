@@ -1,8 +1,8 @@
 ﻿namespace Clap
 {
-    public class OptionalArgumentListAttribute : OptionalArgumentAttribute
+    public class NamedArgumentListAttribute : NamedArgumentAttribute
     {
-        public OptionalArgumentListAttribute(
+        public NamedArgumentListAttribute(
             char ShortName,
             string LongName = null,
             string HelpDescription = null,

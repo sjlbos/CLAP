@@ -3,12 +3,12 @@ using System;
 
 namespace Clap
 {
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface, Inherited = true)]
-    public class ArgumentStyleAttribute : Attribute
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface)]
+    public sealed class ArgumentStyleAttribute : Attribute
     {
-        public ArgumentStyleAttribute(ArgumentStyle ArgumentStyle)
+        public ArgumentStyleAttribute(ArgumentStyle argumentStyle)
         {
-            this.ArgumentStyle = ArgumentStyle;
+            ArgumentStyle = argumentStyle;
         }
 
         public ArgumentStyle ArgumentStyle { get; private set; }

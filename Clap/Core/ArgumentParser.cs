@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using Clap.Core.Exceptions;
 
 namespace Clap.Core
 {
@@ -15,19 +16,36 @@ namespace Clap.Core
 
             ParseStatus result = new ParseStatus{ Succeeded = true };
 
-            // Get schema
-            
-            // Validate schema
-            
-            // Parse input
- 
-            // Map input to schema
+            try
+            {
+                // Get schema
 
-            // Handle errors
+                // Validate schema
 
-            // Return status
+                // Parse input
+
+                // Map input to schema
+
+                // Handle errors
+
+                // Return status
+            }
+            catch (SchemaException ex)
+            {
+                result.Succeeded = false;
+                result.Errors.Add(ex.Message);
+            }
+            catch (ParsingException ex)
+            {
+                result.Succeeded = false;
+                result.Errors.Add(ex.Message);
+            }
 
             return result;
         }
+
+        protected abstract bool IsShortName(string arg);
+        protected abstract bool IsLongName(string arg);
+        protected abstract bool IsFlagList(string arg);
     }
 }
